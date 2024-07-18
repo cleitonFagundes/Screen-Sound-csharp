@@ -1,17 +1,16 @@
 ﻿class Musica
 {
+    public Musica(Banda artista)
+    {
+        Artista = artista; 
+    }
+
     public string Nome { get; set; }
-    public string Artista { get; set; }
+    public Banda Artista { get; }
     public int Duracao { get; set; }
     public bool Disponivel { get; set; }//Operação de leitura(get) e de escrita(set);
 
-    public string DescricaoResumida // ou  public string DescricaoResumida => $"A música {Nome} é do artista {Artista} com duração de {Duracao} segundos."
-    { 
-        get
-        {
-            return $"A música {Nome} é do artista {Artista} com duração de {Duracao} segundos.";
-        }
-    }
+    public string DescricaoResumida => $"A música {Nome} é do artista {Artista} com duração de {Duracao} segundos.";
 
     public void ExibirFichaTecnica()
     {
