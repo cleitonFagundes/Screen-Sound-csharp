@@ -1,36 +1,48 @@
-﻿Banda FooFighters = new Banda();
-FooFighters.Nome = "FooFighters";
+﻿Banda FooFighters = new Banda("FooFighters");
 
-Album FooFightersAlbum = new Album();
-FooFightersAlbum.Nome = "Echoes of Resilience";
+Album FooFightersAlbum = new Album("Echoes of Resilience");
 
-Musica musica1 = new Musica(FooFighters);
-musica1.Nome = "Everlong";
-musica1.Duracao = 250;
+Musica musica1 = new Musica(FooFighters, "Everlong")
+{
+    Duracao = 250,
+    Disponivel = true,
+};
 
-Musica musica2 = new Musica(FooFighters);
-musica2.Nome = "The Pretender";
-musica2.Duracao = 269;
+Musica musica2 = new Musica(FooFighters, "The Pretender")
+{
+    Duracao = 269,
+    Disponivel = true,
+};
 
-Musica musica3 = new Musica(FooFighters);
-musica3.Nome = "My Hero";
-musica3.Duracao = 250;
+Musica musica3 = new Musica(FooFighters, "My Hero")
+{
+    Duracao = 250,
+    Disponivel = false,
+};
 
-Musica musica4 = new Musica(FooFighters);
-musica4.Nome = "Learn to Fly";
-musica4.Duracao = 233;
+Musica musica4 = new Musica(FooFighters, "Learn to Fly")
+{
+    Duracao = 233,
+    Disponivel = true,
+};
 
-Musica musica5 = new Musica(FooFighters);
-musica5.Nome = "All My Life";
-musica5.Duracao = 263;
+Musica musica5 = new Musica(FooFighters, "All My Life")
+{
+    Duracao = 263,
+    Disponivel = true,
+};
 
 FooFightersAlbum.AdicionarMusica(musica1);
 FooFightersAlbum.AdicionarMusica(musica2);
 FooFightersAlbum.AdicionarMusica(musica3);
 FooFightersAlbum.AdicionarMusica(musica4);
 FooFightersAlbum.AdicionarMusica(musica5);
-
-FooFightersAlbum.ExibirMusicasAlbum();
-
 FooFighters.AdicionarAlbum(FooFightersAlbum);
+
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
+musica3.ExibirFichaTecnica();
+musica4.ExibirFichaTecnica();
+musica5.ExibirFichaTecnica();
+FooFightersAlbum.ExibirMusicasAlbum();
 FooFighters.ExibirDiscografia();

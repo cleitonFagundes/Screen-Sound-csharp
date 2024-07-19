@@ -1,7 +1,12 @@
 ﻿class Banda
 {
     private LinkedList<Album> albuns = new LinkedList<Album>();
-    public string Nome { get; set; }
+
+    public Banda(String nome)
+    {
+        Nome = nome;
+    }
+    public string Nome { get; }
 
     public void AdicionarAlbum(Album album)
     {
